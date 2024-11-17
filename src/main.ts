@@ -21,7 +21,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   if (process.env.NODE_ENV === 'development') {
-    const allowedOrigins = ['http://localhost:4200', 'http://localhost:4300'];
+    const allowedOrigins = ['http://localhost:4200', 'http://localhost:4300', 'https://health-accounting.netlify.app'];
     const options: CorsOptions = {
       origin: allowedOrigins,
       credentials: true,
